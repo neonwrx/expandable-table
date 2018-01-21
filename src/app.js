@@ -118,12 +118,16 @@ tableRef.addEventListener("mouseout", function(event) {
   if (event.relatedTarget.nodeName != 'TABLE' && event.relatedTarget.nodeName != 'TD') {
     for(let i=0; i<actions.length; i++) {
       if (actions[i].classList.contains('show')) {
-        actions[i].classList.remove('show');
+        setTimeout (() => {
+          actions[i].classList.remove('show');
+        }, 500);
       }
     }
     for(let i=0; i<actionsCell.length; i++) {
       if (actionsCell[i].classList.contains('show')) {
-        actionsCell[i].classList.remove('show');
+        setTimeout (() => {
+          actionsCell[i].classList.remove('show');
+        }, 500);
       }
     }
   }

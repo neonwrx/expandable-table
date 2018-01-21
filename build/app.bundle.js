@@ -9146,15 +9146,28 @@ tableRef.addEventListener("mouseover", function (event) {
 tableRef.addEventListener("mouseout", function (event) {
   var target = event.target;
   if (event.relatedTarget.nodeName != 'TABLE' && event.relatedTarget.nodeName != 'TD') {
-    for (var i = 0; i < actions.length; i++) {
+    var _loop = function _loop(i) {
       if (actions[i].classList.contains('show')) {
-        actions[i].classList.remove('show');
+        setTimeout(function () {
+          actions[i].classList.remove('show');
+        }, 500);
       }
+    };
+
+    for (var i = 0; i < actions.length; i++) {
+      _loop(i);
     }
-    for (var _i3 = 0; _i3 < actionsCell.length; _i3++) {
-      if (actionsCell[_i3].classList.contains('show')) {
-        actionsCell[_i3].classList.remove('show');
+
+    var _loop2 = function _loop2(i) {
+      if (actionsCell[i].classList.contains('show')) {
+        setTimeout(function () {
+          actionsCell[i].classList.remove('show');
+        }, 500);
       }
+    };
+
+    for (var i = 0; i < actionsCell.length; i++) {
+      _loop2(i);
     }
   }
 }, false);
