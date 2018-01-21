@@ -1,0 +1,102 @@
+.wrapper {
+  margin-top: 50px;
+}
+
+table {
+  margin: 20px auto 0;
+  position: relative;
+  border: 1px solid #48aae7;
+  color: #fff;
+}
+
+td {
+  width: 40px;
+  height: 40px;
+  background-color: #48aae7;
+  border: 1px solid #fff;
+  text-align: center;
+}
+
+.hid-cell {
+  position: absolute;
+  top: -43px;
+  width: 100%;
+  overflow: hidden;
+}
+.action-cell {
+  background-color: #b20000;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 1s linear background-color;
+  -o-transition: 1s linear background-color;
+  transition: 1s linear background-color;
+}
+
+.action {
+  content: "-";
+  position: absolute;
+  left: -43px;
+  width: 40px;
+  height: 40px;
+  background-color: #b20000;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 1s linear background-color;
+  -o-transition: 1s linear background-color;
+  transition: 1s linear background-color;
+}
+
+.addRow {
+  position: absolute;
+  bottom: -43px;
+  left: 1px;
+  width: 40px;
+  height: 40px;
+  background-color: #f3a500;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  -webkit-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+}
+
+.addCell {
+  position: absolute;
+  top: 1px;
+  right: -43px;
+  width: 40px;
+  height: 40px;
+  background-color: #f3a500;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  -webkit-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+}
+
+.action:hover, .action-cell:hover, .addRow:hover, .addCell:hover {
+  cursor: pointer;
+}
+
+.action:hover, .action-cell:hover {
+  background-color: #ca4c49;
+}
+
+.addRow:hover, .addCell:hover {
+  background-color: #f6c052;
+}
+
+.show {
+  opacity: 1!important;
+  visibility: visible!important;
+}
